@@ -1,3 +1,4 @@
+// File: index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,28 +8,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Fun With Facts</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Content</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1>Fun With Facts</h1>
+            <input type="text" id="searchInput" placeholder="Search facts...">
+        </div>
+    </nav>
 
-    <section id="main-content">
-        <article>
-            <h2>Did You Know?</h2>
-            <p>Here is a fascinating scientific fact...</p>
-        </article>
-    </section>
+    <main class="container">
+        <div class="category-filters" id="categoryFilters">
+            <!-- Categories will be dynamically added here -->
+        </div>
+
+        <div class="facts-grid" id="factsContainer">
+            <!-- Facts will be dynamically added here -->
+        </div>
+    </main>
 
     <footer>
-        <p>&copy; 2025 My Website</p>
+        <p>© 2024 Fun With Facts. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
+
