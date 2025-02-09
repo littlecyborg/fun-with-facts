@@ -1,35 +1,46 @@
-// File: index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun With Facts</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Analytics Script (Optional, for tracking visits) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA-ID');
+    </script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <h1>Fun With Facts</h1>
-            <input type="text" id="searchInput" placeholder="Search facts...">
+    <div id="fact-container">
+        <h1>Fun With Facts</h1>
+        
+        <!-- Display Random Fact -->
+        <div id="fact">
+            <h2>Did you know?</h2>
+            <p id="fact-text">Loading...</p>
+            <img id="fact-image" src="" alt="Fact Image" style="display:none;">
+            <video id="fact-video" controls style="display:none;">
+                <source id="fact-video-source" src="" type="video/mp4">
+            </video>
         </div>
-    </nav>
-
-    <main class="container">
-        <div class="category-filters" id="categoryFilters">
-            <!-- Categories will be dynamically added here -->
+        
+        <!-- Reaction Buttons -->
+        <div id="reaction-buttons">
+            <button id="thumbs-up">👍</button>
+            <button id="thumbs-down">👎</button>
         </div>
 
-        <div class="facts-grid" id="factsContainer">
-            <!-- Facts will be dynamically added here -->
+        <!-- User Analytics (Optional) -->
+        <div id="user-analytics">
+            <p>Visitors: <span id="visitor-count">0</span></p>
+            <p>Time spent on the page: <span id="time-spent">0</span> minutes</p>
         </div>
-    </main>
+    </div>
 
-    <footer>
-        <p>© 2024 Fun With Facts. All rights reserved.</p>
-    </footer>
-
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
-

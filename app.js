@@ -1,59 +1,69 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let facts = [];
-      let activeCategory = 'all';
-  
-      // Fetch facts from JSON file
-      fetch('facts.json')
-          .then(response => response.json())
-          .then(data => {
-              facts = data;
-              setupCategories();
-              renderFacts();
-          })
-          .catch(error => console.error('Error loading facts:', error));
-  
-      // Setup category filters
-      function setupCategories() {
-          const categories = ['all', ...new Set(facts.map(fact => fact.category))];
-          const categoryFilters = document.getElementById('categoryFilters');
-          
-          categories.forEach(category => {
-              const button = document.createElement('button');
-              button.className = `category-btn ${category === 'all' ? 'active' : ''}`;
-              button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-              button.addEventListener('click', () => {
-                  document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
-                  button.classList.add('active');
-                  activeCategory = category;
-                  renderFacts();
-              });
-              categoryFilters.appendChild(button);
-          });
-      }
-  
-      // Render facts
-      function renderFacts() {
-          const container = document.getElementById('factsContainer');
-          const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-          
-          const filteredFacts = facts.filter(fact => {
-              const matchesCategory = activeCategory === 'all' || fact.category === activeCategory;
-              const matchesSearch = fact.title.toLowerCase().includes(searchTerm) ||
-                                  fact.content.toLowerCase().includes(searchTerm);
-              return matchesCategory && matchesSearch;
-          });
-  
-          container.innerHTML = filteredFacts.map(fact => `
-              <div class="fact-card">
-                  <h2>${fact.title}</h2>
-                  <p>${fact.content}</p>
-                  <img src="${fact.imgsource}">
-                  <span class="category-tag">${fact.category}</span>
-              </div>
-          `).join('');
-      }
-  
-      // Search functionality
-      document.getElementById('searchInput').addEventListener('input', renderFacts);
-  });
-  
+let visitorCount = 0;
+let timeSpent = 0;
+let interval;
+
+// Simulate a small set of facts (mock data - for the prototype)
+const facts = [
+    {
+        "fact": "Did you know that honey never spoils?",
+        "image": "images/honey.jpg",
+        "video": "",
+        "subtopic": "Food Facts"
+    },
+    {
+        "fact": "A day on Venus is longer than a year on Venus.",
+        "image": "",
+        "video": "videos/venus.mp4",
+        "subtopic": "Space Facts"
+    },
+    {
+        "fact": "The Eiffel Tower can be 15 cm taller during the summer.",
+        "image": "images/eiffel.jpg",
+        "video": "",
+        "subtopic": "Landmarks"
+    }
+];
+
+// Load and display a random fact when the page loads
+window.onload = function() {
+    displayFact(facts[Math.floor(Math.random() * facts.length)]);
+    
+    // Visitor Count (mock)
+    visitorCount++;
+    document.getElementById("visitor-count").innerText = visitorCount;
+
+    // Track time spent on the page
+    interval = setInterval(function() {
+        timeSpent++;
+        document.getElementById("time-spent").innerText = timeSpent;
+    }, 60000); // Update every minute
+
+    // Reaction buttons
+    document.getElementById("thumbs-up").addEventListener("click", function() {
+        alert("You liked this fact!");
+    });
+
+    document.getElementById("thumbs-down").addEventListener("click", function() {
+        alert("You disliked this fact!");
+    });
+};
+
+// Display fact and media (image or video)
+function displayFact(fact) {
+    document.getElementById("fact-text").innerText = fact.fact;
+
+    if (fact.image) {
+        document.getElementById("fact-image").src = fact.image;
+        document.getElementById("fact-image").style.display = "block";
+        document.getElementById("fact-video").style.display = "none";
+    } else if (fact.video) {
+        document.getElementById("fact-video-source").src = fact.video;
+        document.getElementById("fact-video").style.display = "block";
+        document.getElementById("fact-image").style.display = "none";
+    }
+}
+
+// Stop tracking time if the user leaves the page
+window.onbeforeunload = function() {
+    clearInterval(interval);
+};
