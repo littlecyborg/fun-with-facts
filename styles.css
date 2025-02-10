@@ -1,57 +1,60 @@
 body {
-    background-color: #E3F2FD; /* Light Blue */
     font-family: Arial, sans-serif;
-    color: #0277BD; /* Dark Blue */
+    background-color: #e0f7fa;
+    color: #00796b;
     margin: 0;
     padding: 0;
 }
 
-#fact-container {
-    max-width: 800px;
-    margin: 0 auto;
+header {
+    background-color: #004d40;
+    color: white;
     padding: 20px;
-    background-color: #BBDEFB;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
     text-align: center;
-    color: #01579B; /* Darker Blue */
 }
 
-#fact {
-    margin-top: 20px;
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-img, video {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 15px;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-#reaction-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    padding: 20px;
 }
 
 button {
-    background-color: #0288D1;
+    background-color: #00796b;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
 }
 
 button:hover {
-    background-color: #0277BD;
+    background-color: #004d40;
 }
 
-#user-analytics {
-    margin-top: 30px;
-    text-align: center;
+.reaction-buttons {
+    margin-top: 10px;
+}
+
+.reaction-buttons button {
+    margin-right: 10px;
 }
