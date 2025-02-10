@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="fact-card">
                   <h2>${fact.title}</h2>
                   <p>${fact.content}</p>
-                  <img src="${fact.imgsource}">
                   <span class="category-tag">${fact.category}</span>
               </div>
           `).join('');
