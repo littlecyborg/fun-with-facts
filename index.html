@@ -1,47 +1,35 @@
+// File: index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun With Facts</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Fun With Facts!</h1>
-        <p>Explore amazing facts, interact with the community, and share your thoughts!</p>
-    </header>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1>Fun With Facts</h1>
+            <input type="text" id="searchInput" placeholder="Search facts...">
+        </div>
+    </nav>
 
-    <!-- Form for uploading facts -->
-    <section class="upload-fact">
-        <h2>Upload Your Fact</h2>
-        <form id="uploadForm">
-            <label for="factTitle">Fact Title:</label>
-            <input type="text" id="factTitle" name="factTitle" required>
+    <main class="container">
+        <div class="category-filters" id="categoryFilters">
+            <!-- Categories will be dynamically added here -->
+        </div>
 
-            <label for="factText">Fact Text:</label>
-            <textarea id="factText" name="factText" required></textarea>
-
-            <label for="media">Upload an Image or Video:</label>
-            <input type="file" id="media" name="media" accept="image/*,video/*" required>
-
-            <button type="submit">Upload Fact</button>
-        </form>
-    </section>
-
-    <!-- Section to display facts -->
-    <section class="fact-container" id="factContainer"></section>
-
-    <!-- Pagination controls -->
-    <section class="pagination" id="pagination">
-        <button id="prevBtn">Previous</button>
-        <button id="nextBtn">Next</button>
-    </section>
+        <div class="facts-grid" id="factsContainer">
+            <!-- Facts will be dynamically added here -->
+        </div>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Fun With Facts. All Rights Reserved.</p>
+        <p>© 2024 Fun With Facts. All rights reserved.</p>
     </footer>
 
     <script src="app.js"></script>
 </body>
 </html>
+
