@@ -25,6 +25,12 @@
         "title": "Ocean Depths",
         "content": "The Mariana Trench is the deepest known point on Earth, reaching a depth of approximately 11,034 meters (36,201 feet).",
         "category": "Science",
-        "imgsource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBpHFTOzzNSYgGm2evaQS6zBcjlGFrEFCpuQjHVYq9BdFKTU2NO8uN-n_QEcysNu19SFEHija7RD4TMlxaz5qfwXHsDA6l7vec25pebQ"
+        "imgsource": "https://static.scientificamerican.com/sciam/cache/file/E2E9BDB3-5F41-4D2B-AB11BABC728F2A78_source.jpg?w=1200."
+    {
+        "id": 5,
+        "title": "Computer Games",
+        "content": "The first computer game was created in 1961 called SpaceWar and ran on a computer the size of a car.",
+        "category": "Technology",
+        "imgsource": "https://www.articulatemarketing.com/hubfs/Imported_Blog_Media/640px-Spacewar_screenshot-3.jpg"
     }
 ]
