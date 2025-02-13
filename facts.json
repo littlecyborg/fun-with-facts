@@ -4,34 +4,34 @@
         "title": "The Speed of Light",
         "content": "Light travels at approximately 299,792 kilometers per second in a vacuum, making it the fastest thing in the universe.",
         "category": "Science",
-        "imgsource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6cVkBOmoG4d8ibS8HX8Gq45dEmSzhpT_mA&s
+        "imgsource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6cVkBOmoG4d8ibS8HX8Gq45dEmSzhpT_mA&s",
     },
     {
         "id": 2,
         "title": "Ancient Egypt's Great Pyramid",
         "content": "The Great Pyramid of Giza was the tallest man-made structure in the world for over 3,800 years until the completion of Lincoln Cathedral in 1311.",
         "category": "History",
-        "imgsource":"https://i.natgeofe.com/n/535f3cba-f8bb-4df2-b0c5-aaca16e9ff31/giza-plateau-pyramids_square.jpg"
+        "imgsource":"https://smarthistory.org/wp-content/uploads/2020/11/Pyramids_of_the_Giza_Necropolis.jpg",
     },
     {
         "id": 3,
         "title": "Amazing Human Body",
         "content": "The human body contains enough carbon to make around 900 pencils.",
         "category": "Did You Know",
-        "imgsource":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGsJ3x088JeIXBVGpbC8tYuXLz7jsBDapTks-Ds1XXH2jmmQqMfPjeht38m6vu37KkvQU&usqp=CAU"
+        "imgsource":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGsJ3x088JeIXBVGpbC8tYuXLz7jsBDapTks-Ds1XXH2jmmQqMfPjeht38m6vu37KkvQU&usqp=CAU",
     },
     {
         "id": 4,
         "title": "Ocean Depths",
         "content": "The Mariana Trench is the deepest known point on Earth, reaching a depth of approximately 11,034 meters (36,201 feet).",
         "category": "Science",
-        "imgsource": "https://static.scientificamerican.com/sciam/cache/file/E2E9BDB3-5F41-4D2B-AB11BABC728F2A78_source.jpg?w=1200."
+        "imgsource": "https://static.scientificamerican.com/sciam/cache/file/E2E9BDB3-5F41-4D2B-AB11BABC728F2A78_source.jpg?w=1200.",
     },
     {
         "id": 5,
         "title": "Computer Games",
         "content": "The first computer game was created in 1961 called SpaceWar and ran on a computer the size of a car.",
         "category": "Technology",
-        "imgsource": "https://www.articulatemarketing.com/hubfs/Imported_Blog_Media/640px-Spacewar_screenshot-3.jpg"
+        "imgsource": "https://www.articulatemarketing.com/hubfs/Imported_Blog_Media/640px-Spacewar_screenshot-3.jpg",
     }
 ]
